@@ -1,0 +1,13 @@
+{
+  "name": "spring-reference",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "docsify serve ./docs"
+  },
+  "author": "",
+  "license": "ISC"
+}
