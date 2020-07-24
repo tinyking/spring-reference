@@ -3,7 +3,7 @@
 * [介绍](/)
 * [核心技术](/core/)
   * [1.IoC容器](core/the-ioc-container.md)
-  * 2.Resource
+  * [2.Resource](core/resources.md)
   * [3.验证，数据绑定和类型转换](/core/validation-data-binding-and-type-conversion)
   * 4.Spring Expression Language(SPEL)
   * 5.Aspect Oriented Programming with Spring
