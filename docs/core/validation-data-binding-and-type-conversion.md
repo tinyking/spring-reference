@@ -102,8 +102,9 @@ public class CustomerValidator implements Validator {
 
 ## 3.2.将编码解析为错误信息
 
-我们讨论了数据绑定与验证。本节将介绍与验证错误对应的输出错误信息。在上一节所示的示例中，我们拒绝了`name`和`age`字段。如果我们想通过使用`MessageSource`输出错误消息，我们可以使用拒绝字段时提供的错误代码(在本例中是`name`和`age`)来实现。
+我们讨论了数据绑定与验证。本节将介绍与验证错误对应的输出错误信息。在上一节所示的示例中，我们拒绝了`name`和`age`字段。如果我们想通过使用`MessageSource`输出错误消息，我们可以使用拒绝字段时提供的错误代码(在本例中是`name`和`age`)来实现。当您从`Errors`接口调用(直接或间接使用`ValidationUtils`类)`rejectValue`或其他拒绝方法时，底层实现不仅注册了您传入的代码，还注册了许多额外的错误代码。默认情况下，使用`DefaultMessageCodesResolver`，它(例如)不仅用您提供的代码注册消息，而且还注册包含您传递给reject方法的字段名的消息。因此，如果您使用`rejectValue("age"， "too.darn.old")`拒绝一个字段，除了`too.darn.old.age`和`too.darn.old.age.int`。这样做是为了方便开发人员在定位错误消息时提供帮助。
 
+关于`MessageCodesResolver`和默认策略的更多信息可以在`MessageCodesResolver`和`DefaultMessageCodesResolver`的javadoc中找到。
 
 ## 3.3.Bean操作和`BeanWapper`
 
