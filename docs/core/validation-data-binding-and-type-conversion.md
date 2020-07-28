@@ -106,14 +106,14 @@ public class CustomerValidator implements Validator {
 
 关于`MessageCodesResolver`和默认策略的更多信息可以在`MessageCodesResolver`和`DefaultMessageCodesResolver`的javadoc中找到。
 
-## 3.3.Bean操作和`BeanWapper`
+## 3.3.Bean操作和BeanWapper
 
 ### 3.3.1.设置和获取基本的和嵌套的属性
 
 **Table 11.属性例子**
 
 | 表达式                 | 说明 |
-| ---------------------- | ---- |
+|:-----------------------|:-----|
 | `name`                 |      |
 | `account.name`         |      |
 | `account[2]`           |      |
